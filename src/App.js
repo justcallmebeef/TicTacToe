@@ -74,10 +74,15 @@ class App extends Component {
   }
 
   handleTurnOneBoxThree = () => {
-    if (this.state.boxThree === "" && this.state.boxSeven === "" && this.state.boxFour === "") {
+    if (this.state.boxThree === "" && this.state.boxFive === "") {
       this.setState({
         boxThree: "X",
         boxFive: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O") {
+      this.setState ({
+        boxThree: "X", 
+        boxTwo: "O"
       })
     } else if (this.state.boxThree === "" && this.state.boxSeven === "O" && this.state.boxNine === "O" && this.state.boxOne === "X") {
       this.setState ({
@@ -107,6 +112,11 @@ class App extends Component {
         boxFour: "X", 
         boxSeven: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O") {
+      this.setState({
+        boxFour: "X", 
+        boxEight: "O"
+      })
     }
   }
 
@@ -130,6 +140,21 @@ class App extends Component {
         boxSix: "X", 
         boxSeven: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxNine === "O") {
+      this.setState({
+        boxSix: "X", 
+        boxFour: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O") {
+      this.setState({
+        boxSix: "X", 
+        boxSeven: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O") {
+      this.setState({
+        boxSix: "X", 
+        boxEight: "O"
+      })
     }
   }
 
@@ -143,6 +168,16 @@ class App extends Component {
       this.setState({
         boxSeven: "X", 
         boxNine: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O" && this.state.boxEight === "") {
+      this.setState({
+        boxSeven: "X", 
+        boxEight: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxEight === "X" && this.state.boxSix === "") {
+      this.setState({
+        boxSeven: "X", 
+        boxSix: "O"
       })
     }
   }
@@ -158,6 +193,16 @@ class App extends Component {
         boxEight: "X", 
         boxSeven: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxNine === "O") {
+      this.setState({
+        boxEight: "X", 
+        boxSix: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X") {
+      this.setState({
+        boxEight: "X", 
+        boxFour: "O"
+      })
     }
   }
 
@@ -172,6 +217,16 @@ class App extends Component {
         boxNine: "X", 
         boxSeven: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O" && this.state.boxEight === "") {
+      this.setState({
+        boxNine: "X", 
+        boxEight: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxEight === "X" && this.state.boxSix === "") {
+      this.setState({
+        boxNine: "X", 
+        boxSix: "O"
+      })
     }
   }
 
@@ -182,9 +237,19 @@ class App extends Component {
       setTimeout(function(){ alert("Computer Wins!"); }, 200);
     } else if (this.state.boxSeven === "O" && this.state.boxEight === "O" && this.state.boxNine === "O") {
       setTimeout(function(){ alert("Computer Wins!"); }, 200);
+    } else if (this.state.boxThree === "O" && this.state.boxSix === "O" && this.state.boxNine === "O") {
+      setTimeout(function(){ alert("Computer Wins!"); }, 200);
+    } else if (this.state.boxTwo === "O" && this.state.boxFive === "O" && this.state.boxEight === "O") {
+      setTimeout(function(){ alert("Computer Wins!"); }, 200);
+    } else if (this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSix === "O") {
+      setTimeout(function(){ alert("Computer Wins!"); }, 200);
     } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxSeven === "X") {
       setTimeout(function(){ alert("You did it! You actually WON!!!"); }, 200);
-    }
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxNine === "O" && this.state.boxSix === "X" && this.state.boxFour === "O") {
+      setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O" && this.state.boxSix === "X") {
+      setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
+    } 
   }
 
   resetGame = () => {
