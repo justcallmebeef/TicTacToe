@@ -1,0 +1,31 @@
+.App {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+}
+
+.container {
+  background-color: whitesmoke;
+  height: 600px; 
+  width: 600px; 
+  display: flex; 
+  justify-content: space-between; 
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.square {
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  width: 200px; 
+  height: 200px; 
+  border: black solid .5px; 
+  color: #333333;
+  font-size   : 5em;
+  font-weight : 100;
+}

@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 const Header = () => {
     return (
-        <div>
-            Header wahoo! Let's start building!
-        </div>
+        <Fragment>
+            <h1>Tic Tac Toe</h1>
+        </Fragment>
     )
 }
 
