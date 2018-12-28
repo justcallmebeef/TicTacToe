@@ -20,6 +20,7 @@ class App extends Component {
     }
   }
 
+
   handleTurnOneBoxOne = () => {
     if (this.state.boxOne === "" && this.state.boxTwo === "" && this.state.boxFour === "" && this.state.boxFive === "") {
       this.setState({
@@ -50,7 +51,7 @@ class App extends Component {
         boxTwo: "X",
         boxFive: "O"
       })
-    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "") {
+    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "") {
       this.setState({
         boxTwo: "X", 
         boxThree: "O"
@@ -70,8 +71,18 @@ class App extends Component {
         boxTwo: "X", 
         boxEight: "O"
       }) 
+    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxTwo: "X", 
+        boxSeven: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxThree === "O" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSix === "X" && this.state.boxSeven === "X") {
+      this.setState({
+        boxTwo: "X", 
+        boxEight: "O"
+      })
     }
-  }
+  } 
 
   handleTurnOneBoxThree = () => {
     if (this.state.boxThree === "" && this.state.boxFive === "") {
@@ -165,6 +176,11 @@ class App extends Component {
         boxSix: "X", 
         boxThree: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxThree === "") {
+      this.setState({
+        boxSix: "X", 
+        boxThree: "O"
+      })
     }
   }
 
@@ -188,6 +204,11 @@ class App extends Component {
       this.setState({
         boxSeven: "X", 
         boxSix: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSix === "X") {
+      this.setState({
+        boxSeven: "X", 
+        boxFour: "O"
       })
     }
   }
@@ -223,6 +244,16 @@ class App extends Component {
         boxEight: "X", 
         boxNine: "O"
       })
+    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxEight: "X", 
+        boxSeven: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxThree === "O" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSix === "X" && this.state.boxSeven === "X") {
+      this.setState({
+        boxEight: "X", 
+        boxNine: "O"
+      })
     }
   }
 
@@ -252,6 +283,16 @@ class App extends Component {
         boxNine: "X", 
         boxThree: "O"
       })
+    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxNine: "X", 
+        boxSeven: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxThree === "O" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSix === "X" && this.state.boxSeven === "X") {
+      this.setState({
+        boxNine: "X", 
+        boxEight: "O"
+      })
     }
   }
 
@@ -275,6 +316,10 @@ class App extends Component {
     } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O" && this.state.boxSix === "X") {
       setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
     } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "X" && this.state.boxTwo === "O" && this.state.boxNine === "O") {
+      setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxThree === "O" && this.state.boxTwo === "X" && this.state.boxEight === "O") {
+      setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxThree === "O" && this.state.boxEight === "X" && this.state.boxNine === "O") {
       setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
     }
   }
