@@ -98,7 +98,16 @@ class App extends Component {
         boxFour: "X",
         boxFive: "O"
       }) 
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "X" && this.state.boxNine === "O") {
+      this.setState({
+        boxFour: "X"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O") {
+      this.setState({
+        boxFour: "X", 
+        boxSeven: "O"
+      })
+    }
   }
 
   handleTurnOneBoxFive = () => {
@@ -116,7 +125,12 @@ class App extends Component {
         boxSix: "X",
         boxFive: "O"
       }) 
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxSix: "X", 
+        boxSeven: "O"
+      })
+    }
   }
 
   handleTurnOneBoxSeven = () => {
@@ -125,7 +139,12 @@ class App extends Component {
         boxSeven: "X",
         boxFive: "O"
       }) 
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O") {
+      this.setState({
+        boxSeven: "X", 
+        boxNine: "O"
+      })
+    }
   }
 
   handleTurnOneBoxEight = () => {
@@ -134,7 +153,12 @@ class App extends Component {
         boxEight: "X",
         boxFive: "O"
       }) 
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxEight: "X", 
+        boxSeven: "O"
+      })
+    }
   }
 
   handleTurnOneBoxNine = () => {
@@ -143,7 +167,12 @@ class App extends Component {
         boxNine: "X",
         boxFive: "O"
       }) 
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "X" && this.state.boxThree === "O" && this.state.boxFive === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxNine: "X", 
+        boxSeven: "O"
+      })
+    }
   }
 
   componentDidUpdate = () => {
@@ -153,7 +182,9 @@ class App extends Component {
       setTimeout(function(){ alert("Computer Wins!"); }, 200);
     } else if (this.state.boxSeven === "O" && this.state.boxEight === "O" && this.state.boxNine === "O") {
       setTimeout(function(){ alert("Computer Wins!"); }, 200);
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxSeven === "X") {
+      setTimeout(function(){ alert("You did it! You actually WON!!!"); }, 200);
+    }
   }
 
   resetGame = () => {
@@ -172,11 +203,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Grid handleTurnOneBoxNine={this.handleTurnOneBoxNine} handleTurnOneBoxEight={this.handleTurnOneBoxEight} handleTurnOneBoxSeven={this.handleTurnOneBoxSeven} handleTurnOneBoxSix={this.handleTurnOneBoxSix} handleTurnOneBoxFive={this.handleTurnOneBoxFive} handleWin={this.handleWin} handleTurnOneBoxFour={this.handleTurnOneBoxFour} handleTurnOneBoxThree={this.handleTurnOneBoxThree} handleTurnOneBoxTwo={this.handleTurnOneBoxTwo} handleTurnOneBoxOne={this.handleTurnOneBoxOne} boxNine={this.state.boxNine} boxEight={this.state.boxEight} boxSeven={this.state.boxSeven} boxSix={this.state.boxSix} boxFive={this.state.boxFive} boxFour={this.state.boxFour} boxThree={this.state.boxThree} boxTwo={this.state.boxTwo} boxOne={this.state.boxOne}/>
-        <Reset resetGame={this.resetGame} />
-      </div>
+        <div className="App">
+          <Header />
+          <Grid handleTurnOneBoxNine={this.handleTurnOneBoxNine} handleTurnOneBoxEight={this.handleTurnOneBoxEight} handleTurnOneBoxSeven={this.handleTurnOneBoxSeven} handleTurnOneBoxSix={this.handleTurnOneBoxSix} handleTurnOneBoxFive={this.handleTurnOneBoxFive} handleWin={this.handleWin} handleTurnOneBoxFour={this.handleTurnOneBoxFour} handleTurnOneBoxThree={this.handleTurnOneBoxThree} handleTurnOneBoxTwo={this.handleTurnOneBoxTwo} handleTurnOneBoxOne={this.handleTurnOneBoxOne} boxNine={this.state.boxNine} boxEight={this.state.boxEight} boxSeven={this.state.boxSeven} boxSix={this.state.boxSix} boxFive={this.state.boxFive} boxFour={this.state.boxFour} boxThree={this.state.boxThree} boxTwo={this.state.boxTwo} boxOne={this.state.boxOne}/>
+          <Reset resetGame={this.resetGame} />
+        </div>
     )
   }
 }
