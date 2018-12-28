@@ -117,6 +117,11 @@ class App extends Component {
         boxFour: "X", 
         boxEight: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxSeven === "") {
+      this.setState({
+        boxFour: "X", 
+        boxSeven: "O"
+      })
     }
   }
 
@@ -145,15 +150,20 @@ class App extends Component {
         boxSix: "X", 
         boxFour: "O"
       })
-    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O") {
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O" && this.state.boxSeven === "") {
       this.setState({
         boxSix: "X", 
         boxSeven: "O"
       })
-    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O") {
+    } else if (this.state.boxOne === "X" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFive === "O" && this.state.boxEight === "") {
       this.setState({
         boxSix: "X", 
         boxEight: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "") {
+      this.setState({
+        boxSix: "X", 
+        boxThree: "O"
       })
     }
   }
@@ -198,10 +208,20 @@ class App extends Component {
         boxEight: "X", 
         boxSix: "O"
       })
-    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X") {
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxFour === "") {
       this.setState({
         boxEight: "X", 
         boxFour: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "") {
+      this.setState({
+        boxEight: "X", 
+        boxThree: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "X" && this.state.boxTwo === "O" && this.state.boxNine === "") {
+      this.setState({
+        boxEight: "X", 
+        boxNine: "O"
       })
     }
   }
@@ -227,6 +247,11 @@ class App extends Component {
         boxNine: "X", 
         boxSix: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "") {
+      this.setState({
+        boxNine: "X", 
+        boxThree: "O"
+      })
     }
   }
 
@@ -249,7 +274,9 @@ class App extends Component {
       setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
     } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxTwo === "O" && this.state.boxThree === "X" && this.state.boxEight === "X" && this.state.boxFour === "O" && this.state.boxSix === "X") {
       setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
-    } 
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "X" && this.state.boxFive === "O" && this.state.boxSeven === "O" && this.state.boxThree === "X" && this.state.boxTwo === "O" && this.state.boxNine === "O") {
+      setTimeout(function(){ alert("Tie game. That's boring."); }, 200);
+    }
   }
 
   resetGame = () => {

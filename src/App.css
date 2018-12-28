@@ -29,3 +29,12 @@
   font-size   : 5em;
   font-weight : 100;
 }
+
+button {
+  width: 20%; 
+  height: 3em;
+  margin: 2em;
+  background-color: #333333;
+  color: whitesmoke; 
+  font-size: 1em;
+}
