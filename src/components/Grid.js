@@ -1,23 +1,23 @@
 import React, { Fragment } from 'react'
 
-const Grid = () => {
+const Grid = (props) => {
     return (
         <Fragment>
             <div className="container">
                 <div className="column">
-                    <span className="square">X</span>
-                    <span className="square">O</span>
-                    <span className="square">X</span>
+                    <span className="square"></span>
+                    <span className="square"></span>
+                    <span className="square"></span>
                 </div>
                 <div className="column">
-                    <span className="square">X</span>
-                    <span className="square">O</span>
-                    <span className="square">X</span>
+                    <span className="square"></span>
+                    <span className="square"></span>
+                    <span className="square"></span>
                 </div>
                 <div className="column">
-                    <span className="square">X</span>
-                    <span className="square">O</span>
-                    <span className="square">X</span>
+                    <span className="square"></span>
+                    <span className="square"></span>
+                    <span className="square"></span>
                 </div>
             </div>
         </Fragment>
