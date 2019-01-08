@@ -51,7 +51,7 @@ class App extends Component {
         boxTwo: "X",
         boxFive: "O"
       })
-    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "") {
+    } else if (this.state.boxTwo === "" && this.state.boxOne === "X" && this.state.boxNine === "" && this.state.boxThree === "" && this.state.boxSeven === "") {
       this.setState({
         boxTwo: "X", 
         boxThree: "O"
@@ -80,6 +80,11 @@ class App extends Component {
       this.setState({
         boxTwo: "X", 
         boxEight: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "O" && this.state.boxSeven === "X" && this.state.boxFive === "O" && this.state.boxSix === "") {
+      this.setState({
+        boxTwo: "X", 
+        boxSix: "O"
       })
     }
   } 
@@ -210,6 +215,11 @@ class App extends Component {
         boxSeven: "X", 
         boxFour: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O") {
+      this.setState({
+        boxSeven: "X", 
+        boxFour: "O"
+      })
     }
   }
 
@@ -254,6 +264,21 @@ class App extends Component {
         boxEight: "X", 
         boxNine: "O"
       })
+    } else if (this.state.boxOne === "X" && this.state.boxFour === "O" && this.state.boxSeven === "X" && this.state.boxFive === "O" && this.state.boxSix === "" && this.state.boxThree === "X" && this.state.boxEight === "") {
+      this.setState({
+        boxEight: "X", 
+        boxSix: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxFour === "O" && this.state.boxSeven === "X" && this.state.boxSix === "") {
+      this.setState ({
+        boxEight: "X", 
+        boxSix: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxEight === "" && this.state.boxFour === "") {
+      this.setState ({
+        boxEight: "X", 
+        boxFour: "O"
+      })
     }
   }
 
@@ -292,6 +317,11 @@ class App extends Component {
       this.setState({
         boxNine: "X", 
         boxEight: "O"
+      })
+    } else if (this.state.boxOne === "X" && this.state.boxFive === "O" && this.state.boxFour === "O" && this.state.boxSeven === "X" && this.state.boxSix === "") {
+      this.setState({
+        boxNine: "X", 
+        boxSix: "O"
       })
     }
   }
